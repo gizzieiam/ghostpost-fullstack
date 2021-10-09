@@ -8,6 +8,7 @@ class PostSerializer(HyperlinkedModelSerializer):
         model = Post
         fields = (
             'id',
+            'header',
             'text',
             'likes',
             'dislikes',
