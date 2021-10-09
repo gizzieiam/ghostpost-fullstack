@@ -1,5 +1,4 @@
 import React from "react";
-import './App.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,14 +7,16 @@ import {
 import Boast from './Boast'
 import Roast from './Roast'
 import Highest from './Highest'
-import Forms from './Forms'
+import Forms from './Form'
 import Homepage from './Homepage';
+import NavBar from "../components/Nav/Nav-Bar";
 
 export default function Navigation() {
   return (
     <Router>
       <div>
         <Switch>
+          <NavBar />
           <Route path="/newPost">
             <Forms />
           </Route>
