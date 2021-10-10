@@ -15,8 +15,8 @@ export default function Navigation() {
   return (
     <Router>
       <div>
-        <Switch>
           <NavBar />
+        <Switch>
           <Route path="/newPost">
             <Forms />
           </Route>
