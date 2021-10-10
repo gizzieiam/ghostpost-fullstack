@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Roast extends Component{
+class RoastPost extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -37,4 +37,4 @@ class Roast extends Component{
     }
     }
 
-export default Roast
+export default RoastPost
