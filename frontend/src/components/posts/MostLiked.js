@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Highest extends Component{
+class MostLiked extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -38,4 +38,4 @@ class Highest extends Component{
     }
 }
 
-export default Highest
+export default MostLiked
