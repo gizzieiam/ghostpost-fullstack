@@ -6,6 +6,7 @@ router = routers.DefaultRouter()
 
 router.register(r'Post', PostViewSet)
 
+
 urlpatterns = [
     url(r'^api/', include(router.urls))
 ]
