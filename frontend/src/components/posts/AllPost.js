@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Dislikes from './DisLikes';
+import Likes from './Likes';
 
 class AllPost extends Component{
     constructor(props){
@@ -43,12 +45,11 @@ class AllPost extends Component{
                 <ul key={post.id} className=' mx-width card border-primary mb-3'>
                     <li id='post-li'>{post.text}</li>
                     <div id='btn-container'>
-                        <button id='likes-btn' className='btn btn-outline-success' onClick={() => {this.handleLikes(post.id)}}>
+                        {/* <button id='likes-btn' className='btn btn-outline-success' onClick={() => {this.handleLikes(post.id)}}>
                         {post.likes} Likes
-                        </button>
-                        <button id='dislikes-btn'className='btn btn-outline-danger' onClick={() => {this.handleDislikes(post.id)}}>
-                        {post.dislikes} Dislike
-                        </button>
+                        </button> */}
+                        <Likes post_id={post.id} />
+                        <Dislikes post_id={post.id} />
                     </div>
                     <div id='post-footer'>
                         <li className='text-muted'>{post.roast ? 'Roast' : 'Boast'}</li>

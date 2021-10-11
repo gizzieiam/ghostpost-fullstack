@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import Likes from './Likes'
+import Dislikes from './DisLikes'
 class MostLiked extends Component{
     constructor(props){
         super(props);
@@ -20,13 +21,9 @@ class MostLiked extends Component{
                     <ul key={post.id} className=' mx-width card border-primary mb-3'>
                         <li id='post-li'>{post.text}</li>
                         <div id='btn-container'>
-                            <button id='likes-btn' className='btn btn-outline-success' onClick={() => {this.handleLikes(post.id)}}>
-                            {post.likes} Likes
-                            </button>
-                            <button id='dislikes-btn'className='btn btn-outline-danger' onClick={() => {this.handleDislikes(post.id)}}>
-                            {post.dislikes} Dislike
-                            </button>
-                            </div>
+                            <Likes post_id={post.id} />
+                            <Dislikes post_id={post.id}/>
+                        </div>
                             <div id='post-footer'>
                             <li className='text-muted'>{post.roast ? 'Roast' : 'Boast'}</li>
                             <li className='text-muted'>Created: {post.create_time.substring(0, 10)}</li>
